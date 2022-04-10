@@ -6509,9 +6509,9 @@ body:not(.canvas-visible) .off-canvas {
         padding-bottom: 60px !important
     }
 
-/*     .m-menubar {
+    .m-menubar {
         display: block
-    } */
+    }
 }
 
 /*rollbar*/
