@@ -4101,6 +4101,7 @@ body:not(.canvas-visible) .off-canvas {
     text-align: right;
     margin-right: 0;
     color: #f4621f;
+    font-weight:bolder;
 }
 
 .entry-footer .entry-meta a {
@@ -4112,9 +4113,9 @@ body:not(.canvas-visible) .off-canvas {
         display: none;
     }
 
-    .entry-footer .meta-author {
-        display: none;
-    }
+    /*.entry-footer .meta-author {*/
+    /*    display: none;*/
+    /*}*/
 
     .posts-wrapper .post-list, .posts-wrapper .post-grid, .carousel .post-grid {
         padding: 5px;
@@ -8383,3 +8384,134 @@ select.form-control:focus::-ms-value {
     padding:3px;
     font-weight:bold;
 }
+
+/*底部统计模块*/
+.site-data-wp {
+  height: 200px;
+  font-size: 0;
+  text-align: center;
+  background-color: #7a99f2;
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
+}
+
+.site-data-wp .data-items {
+  display: -webkit-box;
+  display: flex;
+  min-height: 85px;
+  padding-top: 45px;
+  padding-bottom: 32px;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.site-data-wp li {
+  display: inline-block;
+  width: 220px;
+  vertical-align: top;
+}
+
+.site-data-wp li i {
+  display: inline-block;
+  height: 25px;
+  font-size: 18px;
+  color: #abbae5;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.site-data-wp li:hover i {
+  color: #fff;
+}
+
+.site-data-wp li:hover span {
+  color: #fff;
+}
+
+.site-data-wp li strong {
+  position: relative;
+  display: block;
+  font-size: 26px;
+  line-height: 42px;
+  color: #fff;
+}
+
+.site-data-wp li strong::after {
+  position: absolute;
+  padding-left: 3px;
+  font-size: 18px;
+  line-height: 1;
+  content: '+';
+  opacity: 0;
+}
+
+.site-data-wp li strong.active::after {
+  opacity: 1;
+}
+
+.site-data-wp li span {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.site-data-wp .btn-outlined {
+  min-width: 100px;
+  height: 40px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 36px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.btn.btn-outlined:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  content: '';
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.btn.btn-outlined:hover:before {
+  display: block;
+  -webkit-animation: circleIn .3s linear;
+  animation: circleIn .3s linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.site-data-wp .btn-outlined:active,
+.site-data-wp .btn-outlined:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .site-data-wp {
+    height: auto;
+    padding-bottom: 30px;
+    background-size: auto 100%;
+  }
+  .site-data-wp li {
+    width: 50%;
+  }
+}
+/*底部统计模块*/
+
+
